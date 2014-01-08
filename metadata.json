@@ -62,7 +62,7 @@
             "font-size": "24px",
             "font-weight": "400",
             "line-height": "34px",
-            "color": "@color-swatch3",
+            "color": "@color-swatch6",
             "letter-spacing": "inherit"
         },
         "font2": {
