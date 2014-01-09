@@ -3,7 +3,6 @@
 
 {% block content %}
 
-<a name="top"></a>
 <header>
     <div class="wrapper clearfix">
 
@@ -15,12 +14,8 @@
             {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
             {{widget('companyname', 'companyname', {"business": "Pizza Vicenza"})|raw}}
         </div>
-
-        <div class="desktop-nav">
-        </div><!--end desktop-nav-->
        
     </div><!--end wrapper clearfix-->
-
 </header>
 
 <div>
@@ -32,8 +27,6 @@
     <div class="wrapper clearfix">
         {{widget('content', 'footercolumn1content', {"content":"<p>Lorem Ipsum Dolor</p>"})|raw}}
     </div>
-
-    <div class="back-to-top"><a href="#top">Back to top^</a></div>
     
 </footer>
 
