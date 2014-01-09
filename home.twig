@@ -3,12 +3,10 @@
 
 {% block content %}
 
+    {{widget('menusections', 'menusections1', {})|raw}}
+
 <header>
     <div class="wrapper clearfix">
-
-        <div class="navigation">
-        {{widget('menusections', 'menusections1', {})|raw}}
-        </div> <!--end navigation-->
 
         <div class="companyheader clearfix">
             {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}

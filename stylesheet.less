@@ -142,6 +142,124 @@ ol, li, ul {
     }
 }
 
+/* ===============================
+   MENU SECTIONS NAVIGATION
+   =============================== */
+
+.widget.menusections {
+    text-align: center;
+    padding: 10px 0 0;
+    background-color: @color-swatch6;
+    min-height: 30px;
+    ul {
+        display: inline-block;
+        list-style: none;
+        margin: 0px;
+        padding: 0;
+        @media @tablet {
+            /* Hidden until nav icon is clicked */
+            display: none;
+            /* Then these styles are applied */
+            width: 100%;
+            margin: 30px 0 0;
+            background-color: @color-swatch1;
+        }
+
+        /* ALIGN CENTER */
+        &.align-center {
+            li {
+                text-align: center;
+                &:hover {
+                    li {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        /* ALIGN LEFT */
+        &.align-left {
+            li {
+                text-align: left;
+                &:hover {
+                    li {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+        /* ALIGN RIGHT */
+        &.align-right {
+            li {
+                text-align: right;
+                &:hover {
+                    li {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+        li {
+            padding: 0 15px;
+            float: left;
+            display: block;
+            padding-right: 40px;
+            @media @tablet {
+                    width: 100%;
+                    padding: 1em 0;
+                    border-bottom: 1px dotted @color-swatch6;
+            }
+            &:last-child {
+                    @media @tablet {
+                        border-bottom: 0;
+                    }
+            }
+
+            a {
+                display: block;
+                font-family:@font-swatch6-font-family;
+                font-size:@font-swatch6-font-size;
+                font-weight: @font-swatch6-font-weight;
+                color: @font-swatch6-color;
+                line-height:@font-swatch6-line-height;
+                letter-spacing: @font-swatch6-letter-spacing;
+                &:hover {
+                    color: @font-swatch6-color-hover;
+                    text-decoration: underline;
+                }
+                &:after {
+                        color: @color-swatch6;
+                }
+            }
+            &:last-child a:after {
+                            content: "";
+            }
+        }
+    }
+    a {
+            &.pull {
+                display: none;
+                @media @tablet {
+                    display: block;
+                    width: 100%;
+                    position: absolute;
+                    top: 10px;
+                    right: 47%;
+                    &:after {
+                        content:"";
+                        background: image('/images/nav-icon.png') no-repeat;
+                        width: 30px;
+                        height: 30px;
+                        display: inline-block;
+                        position: absolute;
+                        right: 0;
+                    }
+                }
+            }
+        }
+}
+
+
+
 
 /* ===============================
    HEADER
@@ -750,289 +868,6 @@ footer {
 
 
 
-/* ===============================
-   MENU NAVIGATION
-   =============================== */
-
-.top-nav {
-  display: none;
-}
-
-.desktop-nav {
-  padding: 10px 0 0;
-  background-color: @color-swatch6;
-}   
-
-.navigation {
-  text-align: center;
-}
-    .navigation ul {
-      display: inline-block;
-      list-style: none;
-      margin: 0px;
-      padding-left: 0;
-    }
-        .navigation ul li {
-            padding: 0 15px;
-            float: left;
-        }
-            .navigation ul li a {
-                display: block;
-                font-family:@font-swatch6-font-family;
-                font-size:@font-swatch6-font-size;
-                font-weight: @font-swatch6-font-weight;
-                color: @font-swatch6-color;
-                line-height:@font-swatch6-line-height;
-                letter-spacing: @font-swatch6-letter-spacing;
-            }
-                .navigation ul li a:hover {
-                    color: @font-swatch6-color-hover;
-                    text-decoration: underline;
-                }
-                    .navigation ul li a:after {
-                        color: @color-swatch6;
-                    }
-                        .navigation ul li:last-child a:after {
-                            content: "";
-                        }
-
-                            @media only screen and (max-width: 1200px) {
-                                .navigation ul li a:after {
-                                    content: "";
-                                }
-                            }
-
-.widget.navigation ul {
-    padding: 0;
-    margin: 20px 0 0;
-}
-    .widget.navigation ul li {
-        float: left;
-        display: block;
-        padding-right: 40px;
-    }
-
-    /* TEXT ALIGNMENT */
-
-    .widget.navigation ul.align-center li {
-        text-align: center;
-    }
-
-    .widget.navigation ul.align-left li {
-        text-align: left;
-    }
-
-    .widget.navigation ul.align-right li {
-        text-align: right;
-    }
-
-/* ===============================
-   EXTENDED NAVIGATION
-   =============================== */
-
-.widget.extendednavigation {
-    text-align: center;
-    position: relative;
-}
-  .widget.extendednavigation ul {
-    padding: 0;
-    margin: 0;
-  }
-    .widget.extendednavigation a.pull {
-        display: none;
-    }
-      .widget.extendednavigation ul li {
-          display: inline-block;
-      }
-
-      /* TEXT ALIGNMENT */
-
-      .widget.extendednavigation ul.align-center li {
-        text-align: center;
-      }
-
-      .widget.extendednavigation ul.align-left li {
-        text-align: left;
-      }
-
-      .widget.extendednavigation ul.align-right li {
-        text-align: right;
-      }
-
-.widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text {
-  display: block;
-  padding: 16px;
-  margin: 0;
-  font-family:@font-swatch6-font-family;
-  font-size:@font-swatch6-font-size;
-  font-weight: @font-swatch6-font-weight;
-  color: @font-swatch6-color;
-  line-height:@font-swatch6-line-height;
-  letter-spacing: @font-swatch6-letter-spacing;
-}
-  .widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text:hover {
-    color: @font-swatch6-color;
-  }
-    .widget.extendednavigation ul li.folder .text:hover {
-       color: @font-swatch6-color-hover;
-    }
-    .widget.extendednavigation ul li a:hover, .widget.extendednavigation ul li.folder:hover {
-        text-decoration: none;
-        color: @font-swatch6-color-hover;
-    }
-
-.widget.extendednavigation ul li.folder {
-  background-image: image('/images/arrow-down.png');
-  background-size: 22px 10px;
-  background-position: right center;
-  background-repeat: no-repeat;
-  height: 100%;
-  cursor: pointer;
-}
-
-.widget.extendednavigation li > ul {
-  display: none;
-}
-  .widget.extendednavigation ul li:hover > ul {
-    display: block;
-    width: 186px;
-    position: absolute;
-    background-color: @color-swatch1;
-    border-top: 2px solid @color-swatch6;
-    z-index: 500;
-    margin-top: 0;
-    padding: 0;
-  }
-    .widget.extendednavigation ul li:hover > ul > li {
-      display: block;
-      width: 100%;
-      text-align: center;
-    }
-      .widget.extendednavigation ul li:hover > ul li a {
-        padding: 0;
-      }
-        .widget.extendednavigation ul li:hover > ul > li > a .text {
-          margin-left: 0;
-          color: @font-swatch6-color;
-        }
-          .widget.extendednavigation ul li:hover > ul > li > a:hover {
-            color: @font-swatch6-color-hover;
-          }
-
-/* EXTENDED NAVIGATION - INSIDE ZONE */
-
-.main .widget.extendednavigation {
-    max-width: 100%;
-    width: 100%;
-    float: none;
-    text-align: left;
-}
-  .main .widget.extendednavigation:before,
-  .main .widget.extendednavigation:after {
-      content: " ";
-      display: table;
-  }
-    .main .widget.extendednavigation:after {
-        clear: both;
-    }
-      .main .widget.extendednavigation {
-          *zoom: 1;
-      }
-
-/* ===============================
-   IPAD WIDTH
-   =============================== */
-
-@media only screen and (max-width: 768px) {
-
-  /* NAV */
-
-  .desktop-nav {
-    display: none;
-  }
-
-  .top-nav {
-    display: block;
-  }
-
-  .widget.extendednavigation {
-    width: 100%;
-    padding: 0;
-    border-top: none;
-    border-bottom: none;
-    height: 50px;
-    z-index: 99999;
-  }
-    .widget .extendednavigation {
-      display: block;
-      float: left;
-      width: 100%;
-    }
-
-    /* NAV ICON */
-
-  .widget .extendednavigation a.pull {
-    display: block;
-    width: 100%;
-    height: 50px;
-    top: 0;
-    right: 0;
-    position: absolute;
-    background-color: @color-swatch6;
-  }
-    .widget .extendednavigation a.pull:after {
-        content:"";
-        background: image('/images/nav-icon.png') no-repeat;
-        background-position: right;
-        width: 100%;
-        height: 50px;
-        right: 50%;
-        margin: 0 auto;
-        position: absolute;
-        border: none;
-    }
-
-  /* NAV */
-
-    .widget .extendednavigation ul {
-      width: 100%;
-      display: none;
-      padding: 50px 0 0;
-      margin-bottom: 2.5em;
-      border-bottom: 2px solid @color-swatch6;
-    }
-      .widget .extendednavigation li {
-        width: 100%;
-        padding: 0;
-        border-bottom: 1px dotted @color-swatch6;
-
-        &:hover {
-            background-color:darken(@color-swatch1,5%);
-        }
-
-      }
-        .widget.extendednavigation ul li:last-child {
-          border-bottom: none;
-        }
-
-          .widget.extendednavigation ul li a, .widget.extendednavigation ul li.folder .text {
-            padding: 16px;
-          }
-
-            .widget.extendednavigation ul li > ul {
-              display: none !important;
-            }
-              .widget.extendednavigation ul li:hover > ul {
-                display: block!important;
-                width: 100%;
-              }
-               
-                  .widget.extendednavigation ul li:hover > ul li .text, .widget.extendednavigation ul li:hover > ul li.folder .text {
-                    background-image: image('/images/arrow-left-wh.png');
-                    background-position: left center;
-                    background-repeat: no-repeat;
-                  }
-}
 
 /* ===============================
    IPHONE WIDTH
