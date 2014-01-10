@@ -468,21 +468,7 @@ header {
                                 margin-top: 5px;
                             }
 
-                            ul, li {
-                                border-bottom: 0;
-                                list-style: none;
-                                padding: 0;
-                                margin: 0;
-                            }
-                    
-                            ol {   /* removes list-style on subsections, items and prices */
-                                list-style: none;
-                                padding: 0;
-                                margin: 0;
-                                float: left;
-                            } 
-
-                            ol li p {   /* standard-price and variant-price */
+                            .menu-item-price p {   /* standard-price */
                                 font-family:@font-swatch8-font-family;
                                 font-size:@font-swatch8-font-size;
                                 font-weight: @font-swatch8-font-weight;
@@ -492,10 +478,6 @@ header {
                                 padding: 0px;
                                 margin: 0;
                                 display: inline-block;
-                                    &.standard-price { 
-                                    }
-                                    &.variant-price {                    
-                                    }
                             }
 
                             p {    /* item-description */
