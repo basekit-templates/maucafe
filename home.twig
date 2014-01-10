@@ -18,12 +18,16 @@
     </div><!--end wrapper clearfix-->
 </header>
 
-    {{widget('menu', 'menu1', {})|raw}}
+{{widget('menu', 'menu1', {})|raw}}
+
+
 
 <footer>
     <div class="wrapper clearfix">
         {{widget('content', 'footercolumn1content', {"content":"<p>Lorem Ipsum Dolor</p>"})|raw}}
+        {{widget('profile', 'footercolumn1socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
     </div>
+
     
 </footer>
 
