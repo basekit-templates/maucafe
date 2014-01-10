@@ -5,19 +5,16 @@ Table of Contents -
   1. Default
   2. Variable Media Queries
   3. Custom CSS
-  4. Header
-  5. Menu
-  6. Footer
-  7. Back to Top
-  8. Menu Navigation
-  9. Navigation Extended
-  10. Tablet Specific Styles
-  11. Mobile Specific Styles
-
+  4. Menu sections navigation
+  5. Header
+  6. Menu
+  7. Footer
+  8. SOCIAL BAR WIDGET / PROFILE DATA
+  9. IPHONE WIDTH
 */
 
 /* ===============================
-   Default
+   1. Default
    =============================== */
 
 body {
@@ -109,7 +106,7 @@ ol, li, ul {
 }
 
 /* ===============================
-   VARIABLE MEDIA QUERIES
+   2. VARIABLE MEDIA QUERIES
    =============================== */
 
 @tablet: ~"only screen and (max-width: 768px)";
@@ -117,12 +114,12 @@ ol, li, ul {
 @media only screen and (max-width: 1084px);
 
 /* ===============================
-   CUSTOM CSS
+   3. CUSTOM CSS
    =============================== */
 
 
 /* ===============================
-   MENU SECTIONS NAVIGATION
+   4. MENU SECTIONS NAVIGATION
    =============================== */
 
 .widget.menusections {
@@ -181,7 +178,7 @@ ol, li, ul {
             padding: 0 15px;
             float: left;
             display: block;
-            padding-right: 40px;
+            padding-right: 20px;
             @media @tablet {
                     width: 100%;
                     padding: 1em 0;
@@ -239,7 +236,7 @@ ol, li, ul {
 
 
 /* ===============================
-   HEADER
+   5. HEADER
    =============================== */
 
 header {
@@ -303,7 +300,7 @@ header {
 }   /* end header */
 
 /* ===============================
-   MENU
+   6. MENU
    =============================== */
 
 .widget.menu {
@@ -684,7 +681,7 @@ header {
 } /* end .widget.menu */
 
 /* ===============================
-   FOOTER
+   7. FOOTER
   =============================== */
 
 footer {
@@ -722,34 +719,9 @@ footer {
         }
 }   /* end footer */ 
 
-/* ===============================
-  BACK TO TOP
-   =============================== */
-
-.back-to-top {
-    margin-top: 10px;
-    width: 100%;
-
-        a {
-            background-image: image('/images/back-to-top.png');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-color: @color-swatch6;
-            width: 30px;
-            height: 30px;
-            background-size: 30px;
-            text-indent: -9999px;
-            display: block;
-            border: 2px solid @color-swatch6;
-            margin: 0 auto;
-        }
-
-}   /* end back-to-top */
-
-
 
 /* ===============================
-   SOCIAL BAR WIDGET / PROFILE DATA
+   8. SOCIAL BAR WIDGET / PROFILE DATA
    =============================== */
 
 .widget.profile .bk-profile-socialicons {
@@ -867,7 +839,7 @@ footer {
 
 
 /* ===============================
-   IPHONE WIDTH
+   9. IPHONE WIDTH
    =============================== */
 
 @media only screen and (max-width: 480px) {
