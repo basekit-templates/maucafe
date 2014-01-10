@@ -114,33 +114,12 @@ ol, li, ul {
 
 @tablet: ~"only screen and (max-width: 768px)";
 @mobile: ~"only screen and (max-width: 320px)";
+@media only screen and (max-width: 1084px);
 
 /* ===============================
    CUSTOM CSS
    =============================== */
 
-
-.section-background-image {
-    background-image:image('/images/diagonal-lines.png');
-    background-repeat: repeat;
-    padding: 30px;
-    margin-top: 50px;
-    @media @tablet {
-        background-image: none;
-        border-top: 1px dashed @color-swatch6;
-        padding: 30px 0 0;
-    }
-
-}
-
-.section-background-colour {
-    background-color: lighten(@color-swatch1,3%);
-    padding: 30px;
-     @media @tablet {
-        background-color: @color-swatch1;
-        padding: 0px;
-    }
-}
 
 /* ===============================
    MENU SECTIONS NAVIGATION
@@ -243,12 +222,12 @@ ol, li, ul {
                     width: 100%;
                     position: absolute;
                     top: 10px;
-                    right: 47%;
+                    right: 49%;
                     &:after {
                         content:"";
                         background: image('/images/nav-icon.png') no-repeat;
-                        width: 30px;
-                        height: 30px;
+                        width: 15px;
+                        height: 20px;
                         display: inline-block;
                         position: absolute;
                         right: 0;
@@ -330,370 +309,384 @@ header {
    MENU
    =============================== */
 
-.main {
-    padding: 0;
-    margin-bottom: 40px;
+.widget.menu {
+    width: 1024px;
+    margin:0 auto;
+    background-image:image('/images/diagonal-lines.png');
+    background-repeat: repeat;
+    padding: 30px;
+    margin-top: 50px;
+    @media only screen and (max-width: 1084px) {
+         width: 90%;
+    }
+    @media @tablet {
+        background-image: none;
+        border-top: 1px dashed @color-swatch6;
+        padding: 30px 0 0;
+        width:100%;
+    }
 
-        @media @tablet {
-            padding: 10px 0;
-        }
-        @media @mobile {
-            margin-bottom: 10px;
-            padding:0;
-        }
-
-        ol, li {    /* removes list-style on sections and items */
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        } 
-
-
-        /* SECTION AND SUB-SECTION HEADERS */
-
-        .menu-header, .menu-section-header {
-            padding: 0 0 1.2em;
-
-            @media @tablet {
-                padding: 1.25em 0 0.75em;
+     .main {
+            background-color: lighten(@color-swatch1,3%);
+            width: 960px;
+            padding: 30px;
+            margin: 0 auto;
+            @media only screen and (max-width: 1084px) {
+                 width: 93%;
             }
-
-            h1 {    /* menu-name menu-section-name */
-                text-align: center;
-                overflow: hidden; 
-                text-transform: uppercase;
-                &:before, &:after {
-                    content: "\2605";
-                    display: inline-block;
-                    height: 27px;
-                    width: 28px;
-                    margin: 0 10px;
-                    position: relative;
-                    top: -2px;
-                }
-             }
-            h2 {
-                text-align: center;
-                overflow: hidden; 
-                text-transform: uppercase;
-            }
-            p {    /* menu-description  menu-section-description  menu-availability */
-                text-align: center;       
-            }  
-
-        }   /* end menu-header - menu-section-header */
-
-
-        /* ITEMS */
-
-        .menu-items, .menu-section-items {
-            column-count: 3;
-            column-gap: 50px;
-           -moz-column-count: 3;
-           -moz-column-gap: 50px;
-           -webkit-column-count: 3;
-           -webkit-column-gap : 50px;
-
-            @media @tablet { 
-                column-count: 2;
-                column-gap: 60px;
-               -moz-column-count: 2;
-               -moz-column-gap: 60px;
-               -webkit-column-count: 2;
-               -webkit-column-gap : 60px;
-            }
-
-            @media @mobile { 
-                column-count: 1;
-               -moz-column-count: 1;
-               -webkit-column-count: 1;
-            }
-            
-            li {    /* menu-item and menu-section-item */
-                position: relative;
-                display: inline-block;
-
-                    &.menu-section ol {
-                        -webkit-column-count: 1 !important;                    
-
-            }   /* end menu-items li */
-
-                &.menu-item-promoted {
-                    padding: 1.2em;
-                    margin: 0 0 20px;
-                    border: 1px solid @color-swatch6;
-                    background-color: lighten(@color-swatch6,20%);
-
-                    .inner-item {
-                        border: 0;
-                        padding: 0;
-                        margin: 0;
-                    }
-
-                        &:after { 
-                            content: "♥";
-                            font-size: 30px;
-                            position: absolute;
-                            top: -6px;
-                            display: block;
-                            z-index: 9999999;
-                            right: 5%;
-                            color: @color-swatch3;
-                        }
-
-                        h3 {
-                            width: auto;
-                            margin-top: 0 !important;
-                            margin-right: 1em !important;
-                        }
-
-                }   /* end menu-item-promoted */
-
-                .inner-item {
-                    display: inline-block;
-                    border-bottom: 1px solid lighten(@color-swatch6, 15%);
-                    padding-bottom: 20px;
-                    margin-bottom: 20px;
-
-                    h3 {    /* menu-item-name and menu-section-item-name */  
-                        padding: 0;
-                        font-family: @font-swatch3-font-family;
-                        color: @font-swatch3-color;
-                    }
-
-                    img {   /* menu-item-image and menu-section-item-image */
-                        border: none;
-                        -webkit-border-radius: 5px;
-                        -moz-border-radius: 5px;
-                        border-radius: 5px;
-                        width: 100%;
-                        margin-top: 5px;
-                    }
-
-                    ul, li {
-                        border-bottom: 0;
-                        list-style: none;
-                        padding: 0;
-                        margin: 0;
-                    }
-            
-                    ol {   /* removes list-style on subsections, items and prices */
-                        list-style: none;
-                        padding: 0;
-                        margin: 0;
-                        float: left;
-                    } 
-
-                    ol li p {   /* standard-price and variant-price */
-                        font-family:@font-swatch8-font-family;
-                        font-size:@font-swatch8-font-size;
-                        font-weight: @font-swatch8-font-weight;
-                        line-height:@font-swatch8-line-height;
-                        color: @font-swatch8-color;
-                        letter-spacing: @font-swatch8-letter-spacing;
-                        padding: 0px;
-                        margin: 0;
-                        display: inline-block;
-                            &.standard-price { 
-                            }
-                            &.variant-price {                    
-                }
-                    }
-
-                    p {    /* item-description */
-                        font-family:@font-swatch5-font-family;
-                        font-size:@font-swatch5-font-size;
-                        font-weight: @font-swatch5-font-weight;
-                        line-height:@font-swatch5-line-height;
-                        color:@font-swatch5-color;
-                        letter-spacing: @font-swatch5-letter-spacing;
-                        float: left;
-                        padding: 0;
-                    }
-
-                    .menu-section-item-dietary-props {
-                        display: block;
-                        margin: 0;
-                        padding: 0;
-                        float: left;
-
-                            .dietary-icon {
-                                background-color: @color-swatch3;
-                                width: 20px;
-                                height: 20px;
-                                background-size: 20px;
-                                border: 2px solid @color-swatch6;
-                                margin: 5px 5px 0 0;
-                                background-repeat: no-repeat;
-                                background-position: center;
-                                display: inline-block;
-                            }
-                              .hot-icon {
-                                background-image: image('/images/hot-icon.png)');
-                              }
-
-                              .vegetarian-icon {
-                                  background-image: image('/images/veggie-icon.png');
-                              }
-
-                              .glutenFree-icon {
-                                  background-image: image('/images/gf-icon.png');
-                              }
-                        
-                    }   /* end menu-section-item-dietary-props */
-
-                    h4, ul li p  {   /* nutritional-title and nutritional-prop for section and subsection */
-                        font-family:@font-swatch4-font-family;
-                        font-size:@font-swatch4-font-size;
-                        font-weight: @font-swatch4-font-weight;
-                        line-height:@font-swatch4-line-height;
-                        color: @font-swatch4-color;
-                        letter-spacing: @font-swatch4-letter-spacing;
-                        float: left;
-                        width: 100%;
-                        margin: 0;
-                        padding: 0;
-                    }
-
-                    ul li p  {
-                        font-size:@font-swatch5-font-size;
-                        font-weight: @font-swatch5-font-weight;
-                        line-height:@font-swatch5-line-height;
-                        color: @font-swatch5-color;
-                    }
-
-                    ul {    /* menu-section-item-nutritional-props */
-                        padding: 0 0 10px;
-                            li:last-child p {
-                                margin-bottom: 6px;
-                            }
-                            li {
-                                display: block;
-                            }
-                            li p {
-                                padding-left: 4px;
-                                margin: 0;
-                                    &:before {
-                                        content:"✓";
-                                        color: @color-swatch5;
-                                        left: -4px;
-                                        position: relative;
-                                    }
-                            }
-                    }
-
-                    .menu-item-description, .menu-section-item-description {
-                        margin-bottom: 0.5em;
-                        width: 100%;
-                    }
-
-                }   /* end inner-item */
-
-            }   /* end li */
-
-        }   /* end menu-items */  
-
-        .menu-sections .sub-section-promoted { /* promoted sub-section */  
-            border: 2px solid @color-swatch6;
-            padding: 2em 2em 0;
-            margin-bottom: 2em;
-            position: relative;
-            &:before {
-               content: " ";
-               position: absolute;
-               top: 3px;
-               left: 3px;
-               right: 3px;
-               bottom: 3px;
-               border: 2px solid @color-swatch6;
-           }
-            @media @mobile {
-                padding: 0 2em 0;
-            }
-            .menu-section-header {
-                border-bottom: 1px solid lighten(@color-swatch6, 15%);
-                margin-bottom: 20px;
-            }
-            .menu-section-items {
-                column-count: 2;
-                column-gap: 50px;
-               -moz-column-count: 2;
-               -moz-column-gap: 50px;
-               -webkit-column-count: 2;
-               -webkit-column-gap : 50px;
-
-                @media @mobile { 
-                    column-count: 1;
-                   -moz-column-count: 1;
-                   -webkit-column-count: 1;
-                }
-        }
-
-        }
-
-        .menu-info {
-            display: inline-block;
-            text-align: center;
-            margin: 2.5em 0;
-            padding: 20px;
-            @media @tablet { 
-                margin: 0;
+             @media @tablet {
+                background-color: @color-swatch1;
+                width:90%;
                 padding: 0px;
             }
 
+                @media @tablet {
+                    padding: 10px 0;
+                }
+                @media @mobile {
+                    margin-bottom: 10px;
+                    padding:0;
+                }
+
+                ol, li {    /* removes list-style on sections and items */
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                } 
 
 
-            p {    /* menu-note */
-                float: left;
-                width: 100%;
-                color: @color-swatch4;
-                margin-bottom: 10px;
-            }
+                /* SECTION AND SUB-SECTION HEADERS */
 
-            dl {    /* menu-dietary-key */
-                display: inline-block;
-                margin: 5px 0;
-                text-align: block;
+                .menu-header, .menu-section-header {
+                    padding: 0 0 1.2em;
 
-                    dt, dd {
-                        display: inline-block;
+                    @media @tablet {
+                        padding: 1.25em 0 0.75em;
                     }
 
-                dt {    /* dietary-icon */
-                    vertical-align: top; 
-                    width: 20px;
-                    height: 20px;
-                    background-size: 20px;
-                    background-color: @color-swatch3;
+                    h1 {    /* menu-name menu-section-name */
+                        text-align: center;
+                        overflow: hidden; 
+                        text-transform: uppercase;
+                        &:before, &:after {
+                            content: "\2605";
+                            display: inline-block;
+                            height: 27px;
+                            width: 28px;
+                            margin: 0 10px;
+                            position: relative;
+                            top: -2px;
+                        }
+                     }
+                    h2 {
+                        text-align: center;
+                        overflow: hidden; 
+                        text-transform: uppercase;
+                    }
+                    p {    /* menu-description  menu-section-description  menu-availability */
+                        text-align: center;       
+                    }  
+
+                }   /* end menu-header - menu-section-header */
+
+
+                /* ITEMS */
+
+                .menu-items, .menu-section-items {
+                    column-count: 3;
+                    column-gap: 50px;
+                   -moz-column-count: 3;
+                   -moz-column-gap: 50px;
+                   -webkit-column-count: 3;
+                   -webkit-column-gap : 50px;
+
+                    @media @tablet { 
+                        column-count: 2;
+                        column-gap: 60px;
+                       -moz-column-count: 2;
+                       -moz-column-gap: 60px;
+                       -webkit-column-count: 2;
+                       -webkit-column-gap : 60px;
+                    }
+
+                    @media @mobile { 
+                        column-count: 1;
+                       -moz-column-count: 1;
+                       -webkit-column-count: 1;
+                    }
+                    
+                    li {    /* menu-item and menu-section-item */
+                        position: relative;
+                        display: inline-block;
+
+                            &.menu-section ol {
+                                -webkit-column-count: 1 !important;                    
+
+                    }   /* end menu-items li */
+
+                        &.menu-item-promoted {
+                            padding: 1.2em;
+                            margin: 11px 1px 20px;
+                            border: 1px solid @color-swatch6;
+                            background-color: lighten(@color-swatch6,20%);
+
+                            .inner-item {
+                                border: 0;
+                                padding: 0;
+                                margin: 0;
+                            }
+
+                                &:after { 
+                                    content: "♥";
+                                    font-size: 30px;
+                                    position: absolute;
+                                    top: -6px;
+                                    display: block;
+                                    z-index: 9999999;
+                                    right: 5%;
+                                    color: @color-swatch3;
+                                }
+
+                                h3 {
+                                    width: auto;
+                                    margin-top: 0 !important;
+                                    margin-right: 1em !important;
+                                }
+
+                        }   /* end menu-item-promoted */
+
+                        .inner-item {
+                            display: inline-block;
+                            border-bottom: 1px solid lighten(@color-swatch6, 15%);
+                            padding-bottom: 30px;
+                            margin-bottom: 30px;
+
+                            h3 {    /* menu-item-name and menu-section-item-name */  
+                                padding: 0;
+                                font-family: @font-swatch3-font-family;
+                                color: @font-swatch3-color;
+                            }
+
+                            img {   /* menu-item-image and menu-section-item-image */
+                                border: none;
+                                -webkit-border-radius: 5px;
+                                -moz-border-radius: 5px;
+                                border-radius: 5px;
+                                width: 100%;
+                                margin-top: 5px;
+                            }
+
+                            ul, li {
+                                border-bottom: 0;
+                                list-style: none;
+                                padding: 0;
+                                margin: 0;
+                            }
+                    
+                            ol {   /* removes list-style on subsections, items and prices */
+                                list-style: none;
+                                padding: 0;
+                                margin: 0;
+                                float: left;
+                            } 
+
+                            ol li p {   /* standard-price and variant-price */
+                                font-family:@font-swatch8-font-family;
+                                font-size:@font-swatch8-font-size;
+                                font-weight: @font-swatch8-font-weight;
+                                line-height:@font-swatch8-line-height;
+                                color: @font-swatch8-color;
+                                letter-spacing: @font-swatch8-letter-spacing;
+                                padding: 0px;
+                                margin: 0;
+                                display: inline-block;
+                                    &.standard-price { 
+                                    }
+                                    &.variant-price {                    
+                                    }
+                            }
+
+                            p {    /* item-description */
+                                font-family:@font-swatch5-font-family;
+                                font-size:@font-swatch5-font-size;
+                                font-weight: @font-swatch5-font-weight;
+                                line-height:@font-swatch5-line-height;
+                                color:@font-swatch5-color;
+                                letter-spacing: @font-swatch5-letter-spacing;
+                                float: left;
+                                padding: 0;
+                            }
+
+                            h4 {  /* nutritional-title for section and subsection */
+                                font-family:@font-swatch4-font-family;
+                                font-size:@font-swatch4-font-size;
+                                font-weight: @font-swatch4-font-weight;
+                                line-height:@font-swatch4-line-height;
+                                color: @font-swatch4-color;
+                                letter-spacing: @font-swatch4-letter-spacing;
+                                float: left;
+                                width: 100%;
+                                margin: 0;
+                                padding: 0;
+                            }
+
+                            .menu-item-nutritional-prop { 
+                                font-size:@font-swatch5-font-size;
+                                font-weight: @font-swatch5-font-weight;
+                                line-height:@font-swatch5-line-height;
+                                color: @font-swatch5-color;
+                                float: left;
+                                width: 100%;
+                                margin: 0;
+                                padding: 0;
+                            }
+
+                            .menu-section-item-dietary-props {
+                                display: block;
+                                margin: 0;
+                                padding: 0;
+                                float: left;
+                                    .dietary-icon {
+                                        background-color: @color-swatch3;
+                                        width: 20px;
+                                        height: 20px;
+                                        background-size: 20px;
+                                        border: 2px solid @color-swatch6;
+                                        margin: 5px 5px 0 0;
+                                        background-repeat: no-repeat;
+                                        background-position: center;
+                                        display: inline-block;
+                                    }
+                                    .vegetarian-icon {
+                                        background-image: image('/images/veggie-icon.png');
+                                    }
+
+                                    .glutenFree-icon {
+                                        background-image: image('/images/gf-icon.png');
+                                      }
+                                    .nutFree-icon {
+                                        background-image: image('/images/nutFree-icon.png');
+                                      }
+                                    .dairyFree-icon {
+                                        background-image: image('/images/dairyFree-icon.png');
+                                      }
+                                
+                            }   /* end menu-section-item-dietary-props */
+
+                            .menu-item-description, .menu-section-item-description {
+                                margin-bottom: 0.5em;
+                                width: 100%;
+                            }
+
+                        }   /* end inner-item */
+
+                    }   /* end li */
+
+                }   /* end menu-items */  
+
+                .menu-section.menu-item-promoted { /* promoted sub-section */  
                     border: 2px solid @color-swatch6;
-                    background-repeat: no-repeat;
-                    background-position: center;
+                    padding: 2em 2em 0;
+                    margin-bottom: 2em;
+                    position: relative;
+                    &:before {
+                       content: " ";
+                       position: absolute;
+                       top: 3px;
+                       left: 3px;
+                       right: 3px;
+                       bottom: 3px;
+                       border: 2px solid @color-swatch6;
+                   }
+                    @media @mobile {
+                        padding: 0 2em 0;
+                    }
+                    .menu-section-header {
+                        border-bottom: 1px solid lighten(@color-swatch6, 15%);
+                        margin-bottom: 20px;
+                    }
+                    .menu-section-items {
+                        column-count: 2;
+                        column-gap: 50px;
+                       -moz-column-count: 2;
+                       -moz-column-gap: 50px;
+                       -webkit-column-count: 2;
+                       -webkit-column-gap : 50px;
+
+                        @media @mobile { 
+                            column-count: 1;
+                           -moz-column-count: 1;
+                           -webkit-column-count: 1;
+                        }
                 }
 
-                .vegetarian-icon {
-                    background-image: image('/images/veggie-icon.png');
                 }
 
-                .glutenFree-icon {
-                    background-image: image('/images/gf-icon.png');
-                }
-
-                dd {    /* text for icon */
-                    font-family:@font-swatch5-font-family;
-                    font-size:@font-swatch5-font-size;
-                    font-weight: @font-swatch5-font-weight;
-                    line-height:@font-swatch5-line-height;
-                    color: @font-swatch5-color; 
-                    letter-spacing: @font-swatch5-letter-spacing;
-                    margin: 0 5px -7px;
-                }   
-
-            }   /* end dl */
-
-        }   /* end menu-info */
+                .menu-info {
+                    display: inline-block;
+                    text-align: center;
+                    margin: 2.5em 0;
+                    padding: 20px;
+                    @media @tablet { 
+                        margin: 0;
+                        padding: 0px;
+                    }
 
 
-}   /* end main */
+
+                    p {    /* menu-note */
+                        float: left;
+                        width: 100%;
+                        color: @color-swatch4;
+                        margin-bottom: 10px;
+                    }
+
+                    dl {    /* menu-dietary-key */
+                        display: inline-block;
+                        margin: 5px 0;
+                        text-align: block;
+
+                            dt, dd {
+                                display: inline-block;
+                            }
+
+                        dt {    /* dietary-icon */
+                            vertical-align: top; 
+                            width: 20px;
+                            height: 20px;
+                            background-size: 20px;
+                            background-color: @color-swatch3;
+                            border: 2px solid @color-swatch6;
+                            background-repeat: no-repeat;
+                            background-position: center;
+                        }
+
+                        .vegetarian-icon {
+                            background-image: image('/images/veggie-icon.png');
+                        }
+
+                        .glutenFree-icon {
+                            background-image: image('/images/gf-icon.png');
+                        }
+
+                        dd {    /* text for icon */
+                            font-family:@font-swatch5-font-family;
+                            font-size:@font-swatch5-font-size;
+                            font-weight: @font-swatch5-font-weight;
+                            line-height:@font-swatch5-line-height;
+                            color: @font-swatch5-color; 
+                            letter-spacing: @font-swatch5-letter-spacing;
+                            margin: 0 5px -7px;
+                        }   
+
+                    }   /* end dl */
+
+                }   /* end menu-info */
+
+
+        }   /* end main */
+
+} /* end .widget.menu */
 
 /* ===============================
    FOOTER
@@ -707,6 +700,7 @@ footer {
     line-height:@font-swatch5-line-height;
     letter-spacing: @font-swatch5-letter-spacing;
     padding: 3em 0;
+    margin-top: 3em;
     min-height: 150px;
     background-color: @color-swatch2;
     background-image:image('/images/diagonal-lines.png');
@@ -716,6 +710,14 @@ footer {
             background-color: @color-swatch1;
             border: 2px solid @color-swatch6;
             padding: 3em 1.5em;
+            width: 960px;
+            margin: 0 auto;
+            @media only screen and (max-width: 1084px) {
+            width: 93%;
+            }
+            @media @tablet {
+                width:auto;
+            }
         }
         .map {
             border: 4px solid @color-swatch5;
@@ -886,10 +888,3 @@ footer {
     }
 }
 
-@media only screen and (min-width: 1140px) {
-
-  .wrapper {
-    width: 1024px; /* 1140px - 10% for margins */
-    margin: 0 auto;
-  }
-}
