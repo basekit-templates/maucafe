@@ -13,10 +13,10 @@
             "color1":"#f7f4e1",
             "color2":"#f7f4e1",
             "color3":"#841c2f",
-            "color4":"#3c4a55",
+            "color4":"#841c2f",
             "color5":"#3c4a55",
-            "color6":"#9bd6cf",
-            "color7":"#ffffff"
+            "color6":"#3c4a55",
+            "color7":"#9bd6cf"
         },
         "Swatch 2": {
             "color1":"#f7f4e1",
@@ -38,11 +38,11 @@
         },
         "Swatch 4": {
             "color1":"#f7f4e1",
-            "color2":"#f7f4e1",
-            "color3":"#841c2f",
-            "color4":"#3c4a55",
+            "color2":"#788F8C",
+            "color3":"#788F8C",
+            "color4":"#788F8C",
             "color5":"#3c4a55",
-            "color6":"#9bd6cf",
+            "color6":"#788F8C",
             "color7":"#ffffff"
         },
         "Swatch 5": {
@@ -62,14 +62,14 @@
             "font-size": "24px",
             "font-weight": "400",
             "line-height": "34px",
-            "color": "@color-swatch6",
+            "color": "@color-swatch7",
             "letter-spacing": "inherit"
         },
         "font2": {
             "font-family": "\"Futura\", \"Helvetica\", sans-serif",
             "font-size": "24px",
             "font-weight": "400",
-            "line-height": "34px",
+            "line-height": "36px",
             "color": "@color-swatch3",
             "letter-spacing": "inherit"
         },
@@ -93,7 +93,7 @@
             "font-family": "\"Futura\", \"Helvetica\", sans-serif",
             "font-size": "14px",
             "font-weight": "400",
-            "line-height": "24px",
+            "line-height": "26px",
             "color": "@color-swatch5",
             "letter-spacing": "inherit"
         },
@@ -110,9 +110,9 @@
         },
         "font7": {
             "font-family": "\"Futura\", \"Helvetica\", sans-serif",
-            "font-size": "18px",
+            "font-size": "14px",
             "font-weight": "400",
-            "line-height": "28px",
+            "line-height": "26px",
             "color": "@color-swatch5",
             "letter-spacing": "inherit",
             "background-color": "transparent",
