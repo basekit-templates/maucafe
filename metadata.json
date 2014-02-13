@@ -19,40 +19,40 @@
             "color7":"#9bd6cf"
         },
         "Swatch 2": {
-            "color1":"#f7f4e1",
-            "color2":"#f7f4e1",
-            "color3":"#841c2f",
-            "color4":"#3c4a55",
+            "color1":"#FCFBF2",
+            "color2":"#FCFBF2",
+            "color3":"#E77E7E",
+            "color4":"#72948F",
             "color5":"#3c4a55",
-            "color6":"#E77E7E",
-            "color7":"#ffffff"
+            "color6":"#3c4a55",
+            "color7":"#72948F"
         },
         "Swatch 3": {
-            "color1":"#f7f4e1",
-            "color2":"#f7f4e1",
-            "color3":"#E77E7E",
+            "color1":"#F9F7EC",
+            "color2":"#F9F7EC",
+            "color3":"#D46D02",
             "color4":"#3c4a55",
             "color5":"#3c4a55",
-            "color6":"#9bd6cf",
-            "color7":"#ffffff"
+            "color6":"#3c4a55",
+            "color7":"#9bd6cf"
         },
         "Swatch 4": {
-            "color1":"#f7f4e1",
-            "color2":"#788F8C",
-            "color3":"#788F8C",
-            "color4":"#788F8C",
+            "color1":"#F9F8EF",
+            "color2":"#F9F8EF",
+            "color3":"#85E4E1",
+            "color4":"#718F8B",
             "color5":"#3c4a55",
-            "color6":"#788F8C",
-            "color7":"#ffffff"
+            "color6":"#3c4a55",
+            "color7":"#718F8B"
         },
         "Swatch 5": {
-            "color1":"#f7f4e1",
-            "color2":"#f7f4e1",
-            "color3":"#841c2f",
-            "color4":"#3c4a55",
-            "color5":"#3c4a55",
-            "color6":"#9bd6cf",
-            "color7":"#ffffff"
+            "color1":"#F9F8EF",
+            "color2":"#F9F8EF",
+            "color3":"#B1203A",
+            "color4":"#36615B",
+            "color5":"#36615B",
+            "color6":"#F9F8EF",
+            "color7":"#36615B"
         }
     },
     "fontSwatch": {
@@ -102,8 +102,8 @@
             "font-size": "16px",
             "font-weight": "400",
             "line-height": "26px",
-            "color": "@color-swatch5",
-            "color-hover": "@color-swatch5",
+            "color": "@color-swatch6",
+            "color-hover": "@color-swatch6",
             "letter-spacing": "inherit",
             "background-color": "transparent",
             "background-color-hover": "transparent"
