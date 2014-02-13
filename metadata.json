@@ -70,7 +70,7 @@
             "font-size": "24px",
             "font-weight": "400",
             "line-height": "36px",
-            "color": "@color-swatch3",
+            "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
         "font3": {
@@ -78,7 +78,7 @@
             "font-size": "18px",
             "font-weight": "400",
             "line-height": "28px",
-            "color": "@color-swatch3",
+            "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
         "font4": {
@@ -86,7 +86,7 @@
             "font-size": "14px",
             "font-weight": "400",
             "line-height": "24px",
-            "color": "@color-swatch3",
+            "color": "@color-swatch5",
             "letter-spacing": "inherit"
         },
         "font5": {
