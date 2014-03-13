@@ -1090,3 +1090,35 @@ hr {
             padding: 3em 1.5em;
         }
 }   /* end footer */ 
+
+/* ===============================
+   PRINT STYLES 
+   =============================== */
+.print-mixin {
+    .widget.menu .main .menu-items li.menu-item-promoted h3:after {
+	    color: #b9b9b9;
+    }
+    .widget.menu .main .menu-subsection .menu-subsection-promoted:before {
+	    display: none;
+    }
+    .menu-subsection,
+    .menu-item-promoted {
+	   border: 1px solid #b9b9b9 !important;
+    }
+    .menu-subsection {
+	    padding: 20px !important;
+	    margin-bottom: 40px !important;
+    }
+    .widget.menu .main .menu-subsection .menu-subsection-promoted {
+	    padding: 0 !important;
+	    margin: 0 !important;
+    }
+}
+ 
+@media print {
+    .print-mixin;
+}
+ 
+.bk-print {
+    .print-mixin;
+}
