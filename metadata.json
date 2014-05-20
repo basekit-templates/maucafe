@@ -2,6 +2,7 @@
     "name":"Mau Cafe",
     "thumbnail":"maucafe.png",
     "screenshot":"maucafe.png",
+    "templateType":"menu",
     "tags": {
     "en": ["menu", "cafe", "light", "plain", "restaurant", "simple", "san-serif"],
     "es": ["menú", "cafetería", "bar", "restaurante"],
